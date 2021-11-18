@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,16 +16,115 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Fjk-YW-CrG">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="AbG-hK-Lc5">
+                                    <size key="itemSize" width="414" height="222"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="MainAccountCell" id="F55-6X-vxI" customClass="MainCollectionViewCell" customModule="bankPrac" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="222"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="lfG-5a-Cgc">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="222"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="accountName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BTe-Qo-D6r">
+                                                    <rect key="frame" x="30" y="30" width="107" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="accountNumber" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PBN-f3-NUM">
+                                                    <rect key="frame" x="30" y="56" width="91" height="15"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Bank balance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VBp-Nj-HRv">
+                                                    <rect key="frame" x="156" y="100.5" width="102" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DGt-GK-cnQ">
+                                                    <rect key="frame" x="0.0" y="172" width="200" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="ApV-FU-U2L"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="tinted" title="이체"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GWd-D7-vcQ">
+                                                    <rect key="frame" x="200" y="172" width="214" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="Vbj-4F-OxM"/>
+                                                        <constraint firstAttribute="width" constant="214" id="Wf3-HQ-SKi"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="tinted" title="카드 이용 내역"/>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k1u-TF-MZ4">
+                                                    <rect key="frame" x="145" y="30" width="0.0" height="0.0"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="H0D-ci-Ibr">
+                                                    <rect key="frame" x="135" y="36.5" width="15" height="10"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="10" id="19U-Ly-DYN"/>
+                                                        <constraint firstAttribute="width" constant="15" id="BaX-Y2-No3"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="DGt-GK-cnQ" firstAttribute="leading" secondItem="lfG-5a-Cgc" secondAttribute="leading" id="Dca-Wx-HNa"/>
+                                                <constraint firstItem="GWd-D7-vcQ" firstAttribute="top" secondItem="VBp-Nj-HRv" secondAttribute="bottom" constant="69.5" id="STD-AE-bQu"/>
+                                                <constraint firstItem="GWd-D7-vcQ" firstAttribute="leading" secondItem="DGt-GK-cnQ" secondAttribute="trailing" id="V1Y-4E-xCx"/>
+                                                <constraint firstItem="H0D-ci-Ibr" firstAttribute="top" secondItem="lfG-5a-Cgc" secondAttribute="top" constant="37" id="aZ3-c0-keW"/>
+                                                <constraint firstAttribute="bottom" secondItem="GWd-D7-vcQ" secondAttribute="bottom" id="cex-zT-2DV"/>
+                                                <constraint firstItem="PBN-f3-NUM" firstAttribute="top" secondItem="BTe-Qo-D6r" secondAttribute="bottom" constant="5" id="glA-Nb-7JR"/>
+                                                <constraint firstAttribute="bottom" secondItem="DGt-GK-cnQ" secondAttribute="bottom" id="liF-9w-cTe"/>
+                                                <constraint firstAttribute="trailing" secondItem="GWd-D7-vcQ" secondAttribute="trailing" id="qNU-Ld-cmF"/>
+                                                <constraint firstItem="GWd-D7-vcQ" firstAttribute="baseline" secondItem="DGt-GK-cnQ" secondAttribute="baseline" id="rVl-o1-rs3"/>
+                                                <constraint firstItem="H0D-ci-Ibr" firstAttribute="leading" secondItem="lfG-5a-Cgc" secondAttribute="leading" constant="135" id="zWn-10-vxv"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="414" height="222"/>
+                                        <connections>
+                                            <outlet property="accountBalanceLabel" destination="VBp-Nj-HRv" id="2J3-PB-uf3"/>
+                                            <outlet property="accountNameLabel" destination="BTe-Qo-D6r" id="y8O-9p-KQ5"/>
+                                            <outlet property="accountNumberLabel" destination="PBN-f3-NUM" id="17e-fV-Lji"/>
+                                            <outlet property="starImageView" destination="H0D-ci-Ibr" id="6bu-Pb-wcA"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fjk-YW-CrG" secondAttribute="trailing" id="BRN-u3-Gkc"/>
+                            <constraint firstItem="Fjk-YW-CrG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="HUM-GS-DHf"/>
+                            <constraint firstItem="Fjk-YW-CrG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="QFp-hv-GkG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Fjk-YW-CrG" secondAttribute="bottom" id="sSn-l1-MIS"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-519" y="79"/>
+            <point key="canvasLocation" x="-848" y="17"/>
         </scene>
     </scenes>
     <resources>
+        <image name="star" catalog="system" width="128" height="116"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -16,6 +16,7 @@
 		3C79CD47274646AA006CB541 /* bankPracUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C79CD46274646AA006CB541 /* bankPracUITests.swift */; };
 		3C79CD49274646AA006CB541 /* bankPracUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C79CD48274646AA006CB541 /* bankPracUITestsLaunchTests.swift */; };
 		3C79CD592746491E006CB541 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C79CD582746491E006CB541 /* MainPageViewController.swift */; };
+		3C79CD5F27464A4B006CB541 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C79CD5E27464A4B006CB541 /* MainCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		3C79CD46274646AA006CB541 /* bankPracUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bankPracUITests.swift; sourceTree = "<group>"; };
 		3C79CD48274646AA006CB541 /* bankPracUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bankPracUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3C79CD582746491E006CB541 /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
+		3C79CD5E27464A4B006CB541 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 		3C79CD56274648E7006CB541 /* 2) View */ = {
 			isa = PBXGroup;
 			children = (
+				3C79CD5D27464A3A006CB541 /* customCell */,
 				3C79CD2B274646A9006CB541 /* Main.storyboard */,
 			);
 			path = "2) View";
@@ -149,6 +152,14 @@
 			children = (
 			);
 			path = "1) Model";
+			sourceTree = "<group>";
+		};
+		3C79CD5D27464A3A006CB541 /* customCell */ = {
+			isa = PBXGroup;
+			children = (
+				3C79CD5E27464A4B006CB541 /* MainCollectionViewCell.swift */,
+			);
+			path = customCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,6 +296,7 @@
 				3C79CD26274646A9006CB541 /* AppDelegate.swift in Sources */,
 				3C79CD592746491E006CB541 /* MainPageViewController.swift in Sources */,
 				3C79CD28274646A9006CB541 /* SceneDelegate.swift in Sources */,
+				3C79CD5F27464A4B006CB541 /* MainCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
