@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		3C79CD26274646A9006CB541 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C79CD25274646A9006CB541 /* AppDelegate.swift */; };
 		3C79CD28274646A9006CB541 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C79CD27274646A9006CB541 /* SceneDelegate.swift */; };
-		3C79CD2A274646A9006CB541 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C79CD29274646A9006CB541 /* ViewController.swift */; };
 		3C79CD2D274646A9006CB541 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C79CD2B274646A9006CB541 /* Main.storyboard */; };
 		3C79CD2F274646AA006CB541 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C79CD2E274646AA006CB541 /* Assets.xcassets */; };
 		3C79CD32274646AA006CB541 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C79CD30274646AA006CB541 /* LaunchScreen.storyboard */; };
 		3C79CD3D274646AA006CB541 /* bankPracTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C79CD3C274646AA006CB541 /* bankPracTests.swift */; };
 		3C79CD47274646AA006CB541 /* bankPracUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C79CD46274646AA006CB541 /* bankPracUITests.swift */; };
 		3C79CD49274646AA006CB541 /* bankPracUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C79CD48274646AA006CB541 /* bankPracUITestsLaunchTests.swift */; };
+		3C79CD592746491E006CB541 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C79CD582746491E006CB541 /* MainPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +39,6 @@
 		3C79CD22274646A9006CB541 /* bankPrac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bankPrac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C79CD25274646A9006CB541 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C79CD27274646A9006CB541 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3C79CD29274646A9006CB541 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3C79CD2C274646A9006CB541 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3C79CD2E274646AA006CB541 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C79CD31274646AA006CB541 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +48,7 @@
 		3C79CD42274646AA006CB541 /* bankPracUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bankPracUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C79CD46274646AA006CB541 /* bankPracUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bankPracUITests.swift; sourceTree = "<group>"; };
 		3C79CD48274646AA006CB541 /* bankPracUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bankPracUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3C79CD582746491E006CB541 /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +99,11 @@
 		3C79CD24274646A9006CB541 /* bankPrac */ = {
 			isa = PBXGroup;
 			children = (
+				3C79CD57274648F1006CB541 /* 1) Model */,
+				3C79CD56274648E7006CB541 /* 2) View */,
+				3C79CD55274648DD006CB541 /* 3) Controller */,
 				3C79CD25274646A9006CB541 /* AppDelegate.swift */,
 				3C79CD27274646A9006CB541 /* SceneDelegate.swift */,
-				3C79CD29274646A9006CB541 /* ViewController.swift */,
-				3C79CD2B274646A9006CB541 /* Main.storyboard */,
 				3C79CD2E274646AA006CB541 /* Assets.xcassets */,
 				3C79CD30274646AA006CB541 /* LaunchScreen.storyboard */,
 				3C79CD33274646AA006CB541 /* Info.plist */,
@@ -125,6 +126,29 @@
 				3C79CD48274646AA006CB541 /* bankPracUITestsLaunchTests.swift */,
 			);
 			path = bankPracUITests;
+			sourceTree = "<group>";
+		};
+		3C79CD55274648DD006CB541 /* 3) Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3C79CD582746491E006CB541 /* MainPageViewController.swift */,
+			);
+			path = "3) Controller";
+			sourceTree = "<group>";
+		};
+		3C79CD56274648E7006CB541 /* 2) View */ = {
+			isa = PBXGroup;
+			children = (
+				3C79CD2B274646A9006CB541 /* Main.storyboard */,
+			);
+			path = "2) View";
+			sourceTree = "<group>";
+		};
+		3C79CD57274648F1006CB541 /* 1) Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "1) Model";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,8 +282,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C79CD2A274646A9006CB541 /* ViewController.swift in Sources */,
 				3C79CD26274646A9006CB541 /* AppDelegate.swift in Sources */,
+				3C79CD592746491E006CB541 /* MainPageViewController.swift in Sources */,
 				3C79CD28274646A9006CB541 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
